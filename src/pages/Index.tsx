@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play, BookOpen, Star, Share2, Facebook, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import LanguageToggle from "@/components/LanguageToggle";
 
 // Import hero and category images
 import heroCover from "@/assets/hero-cover.jpg";
@@ -71,6 +72,11 @@ const Index = () => {
           style={{ backgroundImage: `url(${heroCover})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
+        
+        {/* Language Toggle */}
+        <div className="absolute top-6 right-6 z-20">
+          <LanguageToggle />
+        </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-lg">
