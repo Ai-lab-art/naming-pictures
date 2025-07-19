@@ -56,9 +56,16 @@ const CategoryItems = () => {
                 <CardTitle className="text-lg text-center">{item.name}</CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
-                {/* Placeholder for future image */}
-                <div className="aspect-square bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Image</span>
+                <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+                  {item.image ? (
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Image</span>
+                  )}
                 </div>
               </CardContent>
             </Card>
