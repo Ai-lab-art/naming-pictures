@@ -4,10 +4,12 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { categoryData } from "@/data/categories";
 import SoundPlayer from "@/components/SoundPlayer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CategoryItems = () => {
   const navigate = useNavigate();
   const { categoryName } = useParams<{ categoryName: string }>();
+  const { t, getCategoryName } = useLanguage();
   
   const decodedCategoryName = decodeURIComponent(categoryName || '');
   const items = categoryData[decodedCategoryName] || [];
@@ -20,9 +22,9 @@ const CategoryItems = () => {
     return (
       <div className="min-h-screen bg-gradient-hero flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Category not found</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-4">{t('categoryItems.notFound')}</h1>
           <Button onClick={handleBackToCategories}>
-            Back to Categories
+            {t('categoryItems.backToCategories')}
           </Button>
         </div>
       </div>
@@ -41,9 +43,9 @@ const CategoryItems = () => {
             className="gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Categories
+            {t('categoryItems.backToCategories')}
           </Button>
-          <h1 className="text-3xl font-bold text-foreground">{decodedCategoryName}</h1>
+          <h1 className="text-3xl font-bold text-foreground">{getCategoryName(decodedCategoryName)}</h1>
         </div>
 
         {/* Items grid */}
@@ -75,7 +77,7 @@ const CategoryItems = () => {
         {/* Footer info */}
         <div className="text-center mt-12">
           <p className="text-muted-foreground text-lg">
-            {items.length} {decodedCategoryName.toLowerCase()} to learn and identify!
+            {items.length} {getCategoryName(decodedCategoryName).toLowerCase()} {t('categoryItems.toLearn')}
           </p>
         </div>
       </div>

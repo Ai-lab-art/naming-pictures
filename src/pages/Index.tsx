@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Play, BookOpen, Star, Share2, Facebook, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import LanguageToggle from "@/components/LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import hero and category images
 import heroCover from "@/assets/hero-cover.jpg";
@@ -16,6 +17,7 @@ import seaLifeImg from "@/assets/sea-life.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
+  const { t, getCategoryName } = useLanguage();
 
   const handleStartLearning = () => {
     navigate("/categories");
@@ -47,13 +49,13 @@ const Index = () => {
   };
 
   const categoryShowcase = [
-    { name: "Wild Animals", image: lionImg, description: "Learn about majestic creatures" },
-    { name: "Domestic Animals", image: dogImg, description: "Discover friendly pets" },
-    { name: "Birds", image: parrotImg, description: "Explore colorful flying friends" },
-    { name: "Fruits", image: fruitMixImg, description: "Identify delicious fruits" },
-    { name: "Insects", image: butterflyImg, description: "Meet tiny fascinating creatures" },
-    { name: "Flowers", image: flowerGardenImg, description: "Admire beautiful blooms" },
-    { name: "Sea Animals", image: seaLifeImg, description: "Dive into ocean wonders" },
+    { name: "Wild Animals", image: lionImg, description: t('category.wildAnimals') },
+    { name: "Domestic Animals", image: dogImg, description: t('category.domesticAnimals') },
+    { name: "Birds", image: parrotImg, description: t('category.birds') },
+    { name: "Fruits", image: fruitMixImg, description: t('category.fruits') },
+    { name: "Insects", image: butterflyImg, description: t('category.insects') },
+    { name: "Flowers", image: flowerGardenImg, description: t('category.flowers') },
+    { name: "Sea Animals", image: seaLifeImg, description: t('category.seaAnimals') },
   ];
 
   return (
@@ -61,7 +63,7 @@ const Index = () => {
       {/* Developer Credit */}
       <div className="text-center py-4 bg-background/10 backdrop-blur-sm">
         <p className="text-sm text-muted-foreground">
-          Developed by: <span className="font-semibold text-foreground">Hom Bahadur Thapa</span>
+          {t('home.developerCredit')} <span className="font-semibold text-foreground">Hom Bahadur Thapa</span>
         </p>
       </div>
 
@@ -80,12 +82,11 @@ const Index = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-lg">
-            Naming Picture
-            <span className="block text-primary mt-2 animate-fade-in">Learning App</span>
+            {t('home.title')}
+            <span className="block text-primary mt-2 animate-fade-in">{t('home.subtitle')}</span>
           </h1>
           <p className="text-xl md:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12 drop-shadow-lg">
-            Discover and learn to identify amazing creatures, beautiful nature, and delicious fruits 
-            through interactive picture naming games!
+            {t('home.description')}
           </p>
           
           <Button
@@ -95,7 +96,7 @@ const Index = () => {
             className="gap-3 text-2xl px-16 py-8 hover-scale animate-scale-in"
           >
             <Play className="h-8 w-8" />
-            Start Learning Adventure
+            {t('home.startLearning')}
           </Button>
         </div>
       </section>
@@ -105,28 +106,28 @@ const Index = () => {
         {/* Features Grid */}
         <section className="mb-20">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            Why Choose Our Learning App?
+            {t('home.whyChoose')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
               <BookOpen className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Learn by Categories</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.learnByCategories')}</h3>
               <p className="text-muted-foreground text-lg">
-                Explore 7 different categories from wild animals to beautiful flowers
+                {t('home.learnByCategoriesDesc')}
               </p>
             </div>
             <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
               <Star className="h-16 w-16 text-secondary mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Real Pictures</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.realPictures')}</h3>
               <p className="text-muted-foreground text-lg">
-                High-quality, real images to help you learn and remember better
+                {t('home.realPicturesDesc')}
               </p>
             </div>
             <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
               <Play className="h-16 w-16 text-accent mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Interactive Fun</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('home.interactiveFun')}</h3>
               <p className="text-muted-foreground text-lg">
-                Engaging and educational experience for learners of all ages
+                {t('home.interactiveFunDesc')}
               </p>
             </div>
           </div>
@@ -135,7 +136,7 @@ const Index = () => {
         {/* Category Showcase */}
         <section className="mb-20">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            Explore Our Categories
+            {t('home.exploreCategories')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categoryShowcase.map((category, index) => (
@@ -152,7 +153,7 @@ const Index = () => {
                   />
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2">{getCategoryName(category.name)}</h3>
                   <p className="text-muted-foreground text-sm">{category.description}</p>
                 </CardContent>
               </Card>
@@ -163,10 +164,10 @@ const Index = () => {
         {/* Social Sharing Section */}
         <section className="text-center mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-8">
-            Share the Learning Experience
+            {t('home.shareExperience')}
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Help others discover this amazing learning app. Share it with your friends and family!
+            {t('home.shareDesc')}
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Button
@@ -176,7 +177,7 @@ const Index = () => {
               className="gap-2 hover-scale"
             >
               <Facebook className="h-5 w-5 text-blue-600" />
-              Facebook
+              {t('common.facebook')}
             </Button>
             <Button
               variant="outline"
@@ -185,7 +186,7 @@ const Index = () => {
               className="gap-2 hover-scale"
             >
               <Share2 className="h-5 w-5 text-blue-400" />
-              Twitter
+              {t('common.twitter')}
             </Button>
             <Button
               variant="outline"
@@ -194,7 +195,7 @@ const Index = () => {
               className="gap-2 hover-scale"
             >
               <MessageCircle className="h-5 w-5 text-green-500" />
-              WhatsApp
+              {t('common.whatsapp')}
             </Button>
             <Button
               variant="outline"
@@ -203,7 +204,7 @@ const Index = () => {
               className="gap-2 hover-scale"
             >
               <MessageCircle className="h-5 w-5 text-blue-500" />
-              Messenger
+              {t('common.messenger')}
             </Button>
           </div>
         </section>

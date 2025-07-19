@@ -2,6 +2,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import category images
 import wildAnimalsImg from "@/assets/wild-animals.jpg";
@@ -24,6 +25,7 @@ const categories = [
 
 const Categories = () => {
   const navigate = useNavigate();
+  const { t, getCategoryName } = useLanguage();
 
   const handleCategoryClick = (categoryTitle: string) => {
     navigate(`/categories/${encodeURIComponent(categoryTitle)}`);
@@ -45,9 +47,9 @@ const Categories = () => {
             className="gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Home
+            {t('categories.backToHome')}
           </Button>
-          <h1 className="text-3xl font-bold text-foreground">Choose a Category</h1>
+          <h1 className="text-3xl font-bold text-foreground">{t('categories.title')}</h1>
         </div>
 
         {/* Categories grid */}
@@ -65,7 +67,7 @@ const Categories = () => {
         {/* Footer text */}
         <div className="text-center mt-12">
           <p className="text-muted-foreground text-lg">
-            Choose a category to start learning and naming pictures!
+            {t('categories.subtitle')}
           </p>
         </div>
       </div>

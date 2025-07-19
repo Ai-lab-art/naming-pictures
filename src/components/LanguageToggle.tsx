@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Languages } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LanguageToggle = () => {
-  const [language, setLanguage] = useState<'english' | 'nepali'>('english');
+  const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'english' ? 'nepali' : 'english');
+    setLanguage(language === 'english' ? 'nepali' : 'english');
   };
 
   return (
