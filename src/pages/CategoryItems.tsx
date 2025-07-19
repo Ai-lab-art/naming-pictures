@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowLeft } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { categoryData } from "@/data/categories";
+import SoundPlayer from "@/components/SoundPlayer";
 
 const CategoryItems = () => {
   const navigate = useNavigate();
@@ -46,27 +47,26 @@ const CategoryItems = () => {
         </div>
 
         {/* Items grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <Card 
               key={item.id} 
-              className="hover:shadow-lg transition-shadow cursor-pointer bg-gradient-card border-border/50"
+              className="hover:shadow-lg transition-shadow bg-gradient-card border-border/50 relative"
             >
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg text-center">{item.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+              <CardContent className="p-4">
+                <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden mb-3 relative">
+                  <SoundPlayer itemName={item.name} category={decodedCategoryName} />
                   {item.image ? (
                     <img 
                       src={item.image} 
                       alt={item.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-lg"
                     />
                   ) : (
                     <span className="text-muted-foreground text-sm">Image</span>
                   )}
                 </div>
+                <h3 className="text-lg font-semibold text-center text-foreground">{item.name}</h3>
               </CardContent>
             </Card>
           ))}
