@@ -26,8 +26,7 @@ const Categories = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = (categoryTitle: string) => {
-    // Future: Navigate to individual category pages
-    console.log(`Selected category: ${categoryTitle}`);
+    navigate(`/categories/${encodeURIComponent(categoryTitle)}`);
   };
 
   const handleBackToHome = () => {
