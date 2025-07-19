@@ -201,34 +201,6 @@ const Index = () => {
             </Button>
           </div>
         </section>
-
-        {/* Categories Preview */}
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-8">
-            Available Learning Categories
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4 text-muted-foreground mb-12">
-            {["Wild Animals", "Domestic Animals", "Birds", "Fruits", "Insects", "Flowers", "Sea Animals"].map((category) => (
-              <span
-                key={category}
-                className="px-6 py-3 bg-muted rounded-full text-base font-medium hover-scale cursor-pointer"
-                onClick={handleStartLearning}
-              >
-                {category}
-              </span>
-            ))}
-          </div>
-          
-          <Button
-            variant="secondary"
-            size="xl"
-            onClick={handleStartLearning}
-            className="gap-3 text-xl px-12 py-6 hover-scale"
-          >
-            <BookOpen className="h-6 w-6" />
-            Explore All Categories
-          </Button>
-        </section>
       </div>
     </div>
   );
