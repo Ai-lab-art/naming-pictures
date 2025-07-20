@@ -11,7 +11,7 @@ import LanguageToggle from "@/components/LanguageToggle";
 const CategoryItems = () => {
   const navigate = useNavigate();
   const { categoryName } = useParams<{ categoryName: string }>();
-  const { t, getCategoryName } = useLanguage();
+  const { t, getCategoryName, language } = useLanguage();
   
   const decodedCategoryName = decodeURIComponent(categoryName || '');
   const items = categoryData[decodedCategoryName] || [];
@@ -62,7 +62,7 @@ const CategoryItems = () => {
             >
               <CardContent className="p-4">
                 <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden mb-3 relative">
-                  <SoundPlayer itemName={item.name} category={decodedCategoryName} />
+                  <SoundPlayer itemName={item.names ? item.names[language] || item.name : item.name} category={decodedCategoryName} />
                   {item.image ? (
                     <ImageModal 
                       src={item.image} 
@@ -73,7 +73,9 @@ const CategoryItems = () => {
                     <span className="text-muted-foreground text-sm">Image</span>
                   )}
                 </div>
-                <h3 className="text-lg font-semibold text-center text-foreground">{item.name}</h3>
+                <h3 className="text-lg font-semibold text-center text-foreground">
+                  {item.names ? item.names[language] || item.name : item.name}
+                </h3>
               </CardContent>
             </Card>
           ))}

@@ -6,7 +6,7 @@ import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import hero and category images
-import heroCover from "@/assets/hero-cover.jpg";
+import heroCover from "@/assets/learning-hero-cover.jpg";
 import lionImg from "@/assets/lion.jpg";
 import dogImg from "@/assets/dog.jpg";
 import parrotImg from "@/assets/parrot.jpg";
