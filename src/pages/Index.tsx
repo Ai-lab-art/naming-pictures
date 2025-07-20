@@ -101,74 +101,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
-        {/* Features Grid */}
-        <section className="mb-20">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            {t('home.whyChoose')}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
-              <BookOpen className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">{t('home.learnByCategories')}</h3>
-              <p className="text-muted-foreground text-lg">
-                {t('home.learnByCategoriesDesc')}
-              </p>
-            </div>
-            <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
-              <Star className="h-16 w-16 text-secondary mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">{t('home.realPictures')}</h3>
-              <p className="text-muted-foreground text-lg">
-                {t('home.realPicturesDesc')}
-              </p>
-            </div>
-            <div className="text-center p-8 rounded-xl bg-gradient-card shadow-card hover-scale">
-              <Play className="h-16 w-16 text-accent mx-auto mb-6" />
-              <h3 className="text-xl font-semibold mb-4">{t('home.interactiveFun')}</h3>
-              <p className="text-muted-foreground text-lg">
-                {t('home.interactiveFunDesc')}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Category Showcase */}
-        <section className="mb-20">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            {t('home.exploreCategories')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {categoryShowcase.map((category, index) => (
-              <Card 
-                key={category.name} 
-                className="overflow-hidden hover-scale cursor-pointer group bg-gradient-card border-border/50"
-                onClick={handleStartLearning}
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={category.image} 
-                    alt={category.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">{getCategoryName(category.name)}</h3>
-                  <p className="text-muted-foreground text-sm">{category.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Social Sharing Section */}
-        <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8">
-            {t('home.shareExperience')}
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            {t('home.shareDesc')}
-          </p>
+      {/* Social Sharing Section */}
+      <section className="text-center mb-16">
+        <div className="container mx-auto px-4">
           <div className="flex justify-center gap-4 flex-wrap">
             <Button
               variant="outline"
@@ -207,8 +142,8 @@ const Index = () => {
               {t('common.messenger')}
             </Button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { categoryData } from "@/data/categories";
 import SoundPlayer from "@/components/SoundPlayer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const CategoryItems = () => {
   const navigate = useNavigate();
@@ -34,18 +35,21 @@ const CategoryItems = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-8">
-        {/* Header with back button */}
-        <div className="flex items-center gap-4 mb-8">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleBackToCategories}
-            className="gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            {t('categoryItems.backToCategories')}
-          </Button>
-          <h1 className="text-3xl font-bold text-foreground">{getCategoryName(decodedCategoryName)}</h1>
+        {/* Header with back button and language toggle */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleBackToCategories}
+              className="gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              {t('categoryItems.backToCategories')}
+            </Button>
+            <h1 className="text-3xl font-bold text-foreground">{getCategoryName(decodedCategoryName)}</h1>
+          </div>
+          <LanguageToggle />
         </div>
 
         {/* Items grid */}

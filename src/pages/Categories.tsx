@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 
 // Import category images
 import wildAnimalsImg from "@/assets/wild-animals.jpg";
@@ -38,18 +39,21 @@ const Categories = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <div className="container mx-auto px-4 py-8">
-        {/* Header with back button */}
-        <div className="flex items-center gap-4 mb-8">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleBackToHome}
-            className="gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            {t('categories.backToHome')}
-          </Button>
-          <h1 className="text-3xl font-bold text-foreground">{t('categories.title')}</h1>
+        {/* Header with back button and language toggle */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleBackToHome}
+              className="gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              {t('categories.backToHome')}
+            </Button>
+            <h1 className="text-3xl font-bold text-foreground">{t('categories.title')}</h1>
+          </div>
+          <LanguageToggle />
         </div>
 
         {/* Categories grid */}

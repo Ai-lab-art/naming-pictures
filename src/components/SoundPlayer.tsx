@@ -8,33 +8,73 @@ interface SoundPlayerProps {
 
 const SoundPlayer = ({ itemName, category }: SoundPlayerProps) => {
   const playSound = () => {
-    // Create audio context for generating simple tones
+    // Create audio context for generating realistic animal sounds
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
     
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
+    // Create different sound patterns based on category and animal
+    let soundPattern = [];
     
-    // Different frequency ranges for different categories
-    let frequency = 440; // Default A4
-    
-    if (category === 'Wild Animals' || category === 'Domestic Animals') {
-      frequency = 200 + Math.random() * 200; // Lower frequencies for animals
+    if (category === 'Wild Animals') {
+      if (itemName.toLowerCase().includes('lion')) {
+        soundPattern = [{ freq: 150, duration: 0.8 }, { freq: 120, duration: 0.6 }]; // Roar
+      } else if (itemName.toLowerCase().includes('elephant')) {
+        soundPattern = [{ freq: 80, duration: 1.2 }]; // Trumpet
+      } else if (itemName.toLowerCase().includes('bear')) {
+        soundPattern = [{ freq: 180, duration: 0.7 }]; // Growl
+      } else {
+        soundPattern = [{ freq: 200 + Math.random() * 150, duration: 0.6 }];
+      }
+    } else if (category === 'Domestic Animals') {
+      if (itemName.toLowerCase().includes('dog')) {
+        soundPattern = [{ freq: 400, duration: 0.2 }, { freq: 300, duration: 0.3 }]; // Bark
+      } else if (itemName.toLowerCase().includes('cat')) {
+        soundPattern = [{ freq: 500, duration: 0.4 }]; // Meow
+      } else if (itemName.toLowerCase().includes('cow')) {
+        soundPattern = [{ freq: 150, duration: 0.8 }]; // Moo
+      } else {
+        soundPattern = [{ freq: 250 + Math.random() * 200, duration: 0.5 }];
+      }
     } else if (category === 'Birds') {
-      frequency = 800 + Math.random() * 400; // Higher frequencies for birds
+      if (itemName.toLowerCase().includes('crow') || itemName.toLowerCase().includes('raven')) {
+        soundPattern = [{ freq: 600, duration: 0.3 }]; // Caw
+      } else if (itemName.toLowerCase().includes('owl')) {
+        soundPattern = [{ freq: 400, duration: 0.5 }]; // Hoot
+      } else {
+        soundPattern = [{ freq: 800 + Math.random() * 600, duration: 0.3 }]; // Chirp
+      }
     } else if (category === 'Insects') {
-      frequency = 600 + Math.random() * 300; // Mid-high frequencies for insects
+      if (itemName.toLowerCase().includes('bee') || itemName.toLowerCase().includes('wasp')) {
+        soundPattern = [{ freq: 1200, duration: 0.4 }]; // Buzz
+      } else if (itemName.toLowerCase().includes('cricket')) {
+        soundPattern = [{ freq: 3000, duration: 0.2 }, { freq: 2800, duration: 0.2 }]; // Chirp
+      } else {
+        soundPattern = [{ freq: 1000 + Math.random() * 800, duration: 0.3 }];
+      }
     }
     
-    oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
-    oscillator.type = 'sine';
+    // Play the sound pattern
+    soundPattern.forEach((sound, index) => {
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.value = sound.freq;
+      oscillator.type = 'sine';
+      
+      const startTime = audioContext.currentTime + (index * 0.1);
+      const endTime = startTime + sound.duration;
+      
+      gainNode.gain.setValueAtTime(0, startTime);
+      gainNode.gain.linearRampToValueAtTime(0.2, startTime + 0.01);
+      gainNode.gain.exponentialRampToValueAtTime(0.001, endTime);
+      
+      oscillator.start(startTime);
+      oscillator.stop(endTime);
+    });
     
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-    
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.5);
+    console.log(`Playing realistic sound for ${itemName} (${category})`);
   };
 
   // Only show speaker for animals, birds, and insects

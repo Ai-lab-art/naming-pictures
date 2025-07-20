@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-type Language = 'english' | 'nepali';
+type Language = 'english' | 'nepali' | 'hindi';
 
 interface LanguageContextType {
   language: Language;
@@ -61,6 +61,58 @@ const translations = {
     'categoryName.insects': 'Insects',
     'categoryName.flowers': 'Flowers',
     'categoryName.seaAnimals': 'Sea Animals',
+  },
+  hindi: {
+    // Home page
+    'home.title': 'चित्र नामकरण',
+    'home.subtitle': 'सीखने का ऐप',
+    'home.description': 'अद्भुत जीवों, सुंदर प्रकृति, और स्वादिष्ट फलों को इंटरैक्टिव चित्र नामकरण खेलों के माध्यम से पहचानना सीखें!',
+    'home.startLearning': 'सीखने की यात्रा शुरू करें',
+    'home.whyChoose': 'हमारे सीखने के ऐप को क्यों चुनें?',
+    'home.learnByCategories': 'श्रेणियों के अनुसार सीखें',
+    'home.learnByCategoriesDesc': 'जंगली जानवरों से लेकर सुंदर फूलों तक 7 अलग-अलग श्रेणियों का अन्वेषण करें',
+    'home.realPictures': 'वास्तविक चित्र',
+    'home.realPicturesDesc': 'उच्च गुणवत्ता की, वास्तविक छवियां जो आपको बेहतर सीखने और याद रखने में मदद करती हैं',
+    'home.interactiveFun': 'इंटरैक्टिव मज़ा',
+    'home.interactiveFunDesc': 'सभी उम्र के शिक्षार्थियों के लिए आकर्षक और शैक्षणिक अनुभव',
+    'home.exploreCategories': 'हमारी श्रेणियों का अन्वेषण करें',
+    'home.shareExperience': 'सीखने का अनुभव साझा करें',
+    'home.shareDesc': 'दूसरों को इस अद्भुत सीखने के ऐप की खोज में मदद करें। इसे अपने दोस्तों और परिवार के साथ साझा करें!',
+    'home.developerCredit': 'द्वारा विकसित:',
+    
+    // Categories
+    'categories.title': 'एक श्रेणी चुनें',
+    'categories.subtitle': 'सीखना और अन्वेषण शुरू करने के लिए एक श्रेणी का चयन करें!',
+    'categories.backToHome': 'घर वापस जाएं',
+    
+    // Category descriptions
+    'category.wildAnimals': 'राजसी जीवों के बारे में सीखें',
+    'category.domesticAnimals': 'दोस्ताना पालतू जानवरों की खोज करें',
+    'category.birds': 'रंगबिरंगे उड़ने वाले दोस्तों का अन्वेषण करें',
+    'category.fruits': 'स्वादिष्ट फलों की पहचान करें',
+    'category.insects': 'छोटे आकर्षक जीवों से मिलें',
+    'category.flowers': 'सुंदर फूलों की प्रशंसा करें',
+    'category.seaAnimals': 'समुद्री अजूबों में डुबकी लगाएं',
+    
+    // Category Items
+    'categoryItems.backToCategories': 'श्रेणियों पर वापस जाएं',
+    'categoryItems.notFound': 'श्रेणी नहीं मिली',
+    'categoryItems.toLearn': 'सीखने और पहचानने के लिए!',
+    
+    // Common
+    'common.facebook': 'फेसबुक',
+    'common.twitter': 'ट्विटर',
+    'common.whatsapp': 'व्हाट्सएप',
+    'common.messenger': 'मैसेंजर',
+    
+    // Category names
+    'categoryName.wildAnimals': 'जंगली जानवर',
+    'categoryName.domesticAnimals': 'पालतू जानवर',
+    'categoryName.birds': 'पक्षी',
+    'categoryName.fruits': 'फल',
+    'categoryName.insects': 'कीड़े',
+    'categoryName.flowers': 'फूल',
+    'categoryName.seaAnimals': 'समुद्री जानवर',
   },
   nepali: {
     // Home page
