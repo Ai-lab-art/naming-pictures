@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { categoryData } from "@/data/categories";
 import SoundPlayer from "@/components/SoundPlayer";
+import ImageModal from "@/components/ImageModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
 
@@ -63,10 +64,10 @@ const CategoryItems = () => {
                 <div className="aspect-square bg-muted rounded-lg flex items-center justify-center overflow-hidden mb-3 relative">
                   <SoundPlayer itemName={item.name} category={decodedCategoryName} />
                   {item.image ? (
-                    <img 
+                    <ImageModal 
                       src={item.image} 
                       alt={item.name}
-                      className="w-full h-full object-cover rounded-lg"
+                      className="rounded-lg"
                     />
                   ) : (
                     <span className="text-muted-foreground text-sm">Image</span>
