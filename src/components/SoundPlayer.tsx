@@ -38,17 +38,14 @@ const SoundPlayer = ({ itemName, category }: SoundPlayerProps) => {
     }
   };
 
-  // Only show speaker for animals, birds, and insects
-  const showSpeaker = ['Wild Animals', 'Domestic Animals', 'Birds', 'Insects'].includes(category);
-  
-  if (!showSpeaker) return null;
+  // Show speaker for all items now
 
   return (
     <Button
       variant="ghost"
       size="sm"
       onClick={playSound}
-      className="absolute top-2 right-2 h-8 w-8 p-0 bg-background/80 hover:bg-background/90"
+      className="absolute top-2 right-2 h-8 w-8 p-0 bg-blue-500/80 hover:bg-blue-600/90 text-white"
     >
       <Volume2 className="h-4 w-4" />
     </Button>
