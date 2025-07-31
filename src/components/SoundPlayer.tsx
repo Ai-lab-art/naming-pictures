@@ -45,7 +45,7 @@ const SoundPlayer = ({ itemName, category }: SoundPlayerProps) => {
       variant="ghost"
       size="sm"
       onClick={playSound}
-      className="absolute top-2 right-2 h-8 w-8 p-0 bg-blue-500/80 hover:bg-blue-600/90 text-white"
+      className="absolute top-1 right-1 h-8 w-8 p-0 bg-blue-500/90 hover:bg-blue-600 text-white z-10 shadow-lg rounded-full"
     >
       <Volume2 className="h-4 w-4" />
     </Button>

@@ -46,7 +46,7 @@ const Categories = () => {
               variant="outline"
               size="sm"
               onClick={handleBackToHome}
-              className="gap-2"
+              className="gap-2 text-blue-600 border-blue-300 hover:bg-blue-50 hover:text-blue-700"
             >
               <ArrowLeft className="h-4 w-4" />
               {t('categories.backToHome')}

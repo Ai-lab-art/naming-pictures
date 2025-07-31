@@ -19,9 +19,9 @@ const LanguageToggle = () => {
         <Languages className="h-4 w-4 text-blue-300" />
         <SelectValue className="text-blue-100">{currentLanguage?.short}</SelectValue>
       </SelectTrigger>
-      <SelectContent className="bg-background border-border">
+      <SelectContent className="bg-white border-blue-200 z-50">
         {languages.map((lang) => (
-          <SelectItem key={lang.value} value={lang.value} className="text-blue-600 hover:bg-blue-50 hover:text-blue-700">
+          <SelectItem key={lang.value} value={lang.value} className="text-blue-600 hover:bg-blue-50 hover:text-blue-700 focus:bg-blue-50 focus:text-blue-700">
             {lang.label}
           </SelectItem>
         ))}

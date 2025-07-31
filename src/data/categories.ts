@@ -171,7 +171,7 @@ export const wildAnimals: CategoryItem[] = [
   { id: '6', name: 'Cheetah', names: { english: 'Cheetah', nepali: 'चितुवा', hindi: 'चीता' }, image: cheetahImg },
   { id: '7', name: 'Leopard', names: { english: 'Leopard', nepali: 'चितुवा', hindi: 'तेंदुआ' }, image: leopardImg },
   { id: '8', name: 'Rhinoceros', names: { english: 'Rhinoceros', nepali: 'गैंडा', hindi: 'गैंडा' }, image: rhinocerosImg },
-  { id: '9', name: 'Hippopotamus', names: { english: 'Hippopotamus', nepali: 'दरियाई घोडा', hindi: 'दरियाई घोड़ा' }, image: hippopotamusImg },
+  
   { id: '10', name: 'Gorilla', names: { english: 'Gorilla', nepali: 'गोरिल्ला', hindi: 'गोरिल्ला' }, image: gorillaImg },
   { id: '11', name: 'Chimpanzee', names: { english: 'Chimpanzee', nepali: 'चिम्पान्जी', hindi: 'चिम्पांजी' }, image: chimpanzeeImg },
   { id: '12', name: 'Orangutan', names: { english: 'Orangutan', nepali: 'ओराङगुटान', hindi: 'ऑरंगुटान' }, image: orangutanImg },
@@ -205,7 +205,8 @@ export const domesticAnimals: CategoryItem[] = [
   { id: '17', name: 'Alpaca', names: { english: 'Alpaca', nepali: 'अल्पाका', hindi: 'अल्पाका' }, image: alpacaImg },
   { id: '18', name: 'Donkey', names: { english: 'Donkey', nepali: 'गधा', hindi: 'गधा' }, image: donkeyImg },
   { id: '19', name: 'Mule', names: { english: 'Mule', nepali: 'खच्चर', hindi: 'खच्चर' }, image: muleImg },
-  { id: '20', name: 'Pony', names: { english: 'Pony', nepali: 'पोनी', hindi: 'पोनी' }, image: ponyImg },
+  { id: '20', name: 'Hippopotamus', names: { english: 'Hippopotamus', nepali: 'दरियाई घोडा', hindi: 'दरियाई घोड़ा' }, image: hippopotamusImg },
+  { id: '21', name: 'Pony', names: { english: 'Pony', nepali: 'पोनी', hindi: 'पोनी' }, image: ponyImg },
 ];
 
 export const birds: CategoryItem[] = [
