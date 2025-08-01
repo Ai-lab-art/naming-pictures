@@ -238,7 +238,7 @@ export const fruits: CategoryItem[] = [
   { id: '3', name: 'Orange', names: { english: 'Orange', nepali: 'सुन्तला', hindi: 'संतरा' }, image: orangeImg },
   { id: '4', name: 'Grape', names: { english: 'Grape', nepali: 'अंगुर', hindi: 'अंगूर' }, image: grapeImg },
   { id: '5', name: 'Strawberry', names: { english: 'Strawberry', nepali: 'भुईँकाफल', hindi: 'स्ट्रॉबेरी' }, image: strawberryImg },
-  { id: '6', name: 'Blueberry', names: { english: 'Blueberry', nepali: 'निलो बेरी', hindi: 'ब्लूबेरी' }, image: blueberryImg },
+  { id: '6', name: 'Blueberry', names: { english: 'Blueberry', nepali: 'चुत्रो', hindi: 'ब्लूबेरी' }, image: blueberryImg },
   { id: '7', name: 'Raspberry', names: { english: 'Raspberry', nepali: 'ऐँसेलु', hindi: 'रास्पबेरी' }, image: raspberryImg },
   { id: '8', name: 'Blackberry', names: { english: 'Blackberry', nepali: 'किम्बु', hindi: 'ब्लैकबेरी' }, image: blackberryImg },
   { id: '9', name: 'Pineapple', names: { english: 'Pineapple', nepali: 'भुईकटहर', hindi: 'अनानास' }, image: pineappleImg },
