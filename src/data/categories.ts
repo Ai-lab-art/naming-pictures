@@ -26,6 +26,7 @@ import redPandaImg from "@/assets/items/red-panda.jpg";
 import snowLeopardImg from "@/assets/items/snow-leopard.jpg";
 import himalayanTahrImg from "@/assets/items/himalayan-tahr.jpg";
 import slothImg from "@/assets/items/sloth.jpg";
+import pangolinImg from "@/assets/items/pangolin.jpg";
 
 import dogImg from "@/assets/items/dog.jpg";
 import catImg from "@/assets/items/cat.jpg";
@@ -203,6 +204,7 @@ export const wildAnimals: CategoryItem[] = [
   { id: '25', name: 'Snow Leopard', names: { english: 'Snow Leopard', nepali: 'हिउँ चितुवा', hindi: 'हिम तेंदुआ' }, image: snowLeopardImg },
   { id: '26', name: 'Himalayan Tahr', names: { english: 'Himalayan Tahr', nepali: 'थर', hindi: 'हिमालयी तहर' }, image: himalayanTahrImg },
   { id: '27', name: 'Sloth', names: { english: 'Sloth', nepali: 'ढिलो जनावर', hindi: 'आलसी जानवर' }, image: slothImg },
+  { id: '28', name: 'Pangolin', names: { english: 'Pangolin', nepali: 'कवची जनावर', hindi: 'पैंगोलिन' }, image: pangolinImg },
 ];
 
 export const domesticAnimals: CategoryItem[] = [
