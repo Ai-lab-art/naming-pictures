@@ -104,6 +104,21 @@ import kiwiImg from "@/assets/items/kiwi.jpg";
 import papayaImg from "@/assets/items/papaya.jpg";
 import avocadoImg from "@/assets/items/avocado.jpg";
 import coconutImg from "@/assets/items/coconut.jpg";
+import dragonFruitImg from "@/assets/items/dragon-fruit.jpg";
+import lycheeImg from "@/assets/items/lychee.jpg";
+import passionFruitImg from "@/assets/items/passion-fruit.jpg";
+import starFruitImg from "@/assets/items/star-fruit.jpg";
+import durianImg from "@/assets/items/durian.jpg";
+import rambutanImg from "@/assets/items/rambutan.jpg";
+import jackfruitImg from "@/assets/items/jackfruit.jpg";
+import pomegranateImg from "@/assets/items/pomegranate.jpg";
+import figImg from "@/assets/items/fig.jpg";
+import persimmonImg from "@/assets/items/persimmon.jpg";
+import guavaImg from "@/assets/items/guava.jpg";
+import lemonImg from "@/assets/items/lemon.jpg";
+import limeImg from "@/assets/items/lime.jpg";
+import grapefruitImg from "@/assets/items/grapefruit.jpg";
+import tangerineImg from "@/assets/items/tangerine.jpg";
 
 import butterflyImg from "@/assets/items/butterfly.jpg";
 import beeImg from "@/assets/items/bee.jpg";
@@ -301,6 +316,21 @@ export const fruits: CategoryItem[] = [
   { id: '18', name: 'Papaya', names: { english: 'Papaya', nepali: 'मेवा', hindi: 'पपीता' }, image: papayaImg },
   { id: '19', name: 'Avocado', names: { english: 'Avocado', nepali: 'एभोकाडो', hindi: 'एवोकाडो' }, image: avocadoImg },
   { id: '20', name: 'Coconut', names: { english: 'Coconut', nepali: 'नरिवल', hindi: 'नारियल' }, image: coconutImg },
+  { id: '21', name: 'Dragon Fruit', names: { english: 'Dragon Fruit', nepali: 'ड्र्यागन फ्रुट', hindi: 'ड्रैगन फ्रूट' }, image: dragonFruitImg },
+  { id: '22', name: 'Lychee', names: { english: 'Lychee', nepali: 'लिची', hindi: 'लीची' }, image: lycheeImg },
+  { id: '23', name: 'Passion Fruit', names: { english: 'Passion Fruit', nepali: 'प्यासन फ्रुट', hindi: 'पैशन फ्रूट' }, image: passionFruitImg },
+  { id: '24', name: 'Star Fruit', names: { english: 'Star Fruit', nepali: 'तारा फल', hindi: 'स्टार फ्रूट' }, image: starFruitImg },
+  { id: '25', name: 'Durian', names: { english: 'Durian', nepali: 'डुरियन', hindi: 'डुरियन' }, image: durianImg },
+  { id: '26', name: 'Rambutan', names: { english: 'Rambutan', nepali: 'राम्बुतान', hindi: 'रामबुतान' }, image: rambutanImg },
+  { id: '27', name: 'Jackfruit', names: { english: 'Jackfruit', nepali: 'कटहर', hindi: 'कटहल' }, image: jackfruitImg },
+  { id: '28', name: 'Pomegranate', names: { english: 'Pomegranate', nepali: 'दालिम', hindi: 'अनार' }, image: pomegranateImg },
+  { id: '29', name: 'Fig', names: { english: 'Fig', nepali: 'अञ्जीर', hindi: 'अंजीर' }, image: figImg },
+  { id: '30', name: 'Persimmon', names: { english: 'Persimmon', nepali: 'पर्सिमन', hindi: 'पर्सिमन' }, image: persimmonImg },
+  { id: '31', name: 'Guava', names: { english: 'Guava', nepali: 'अम्बा', hindi: 'अमरूद' }, image: guavaImg },
+  { id: '32', name: 'Lemon', names: { english: 'Lemon', nepali: 'कागती', hindi: 'नींबू' }, image: lemonImg },
+  { id: '33', name: 'Lime', names: { english: 'Lime', nepali: 'हरियो कागती', hindi: 'हरा नींबू' }, image: limeImg },
+  { id: '34', name: 'Grapefruit', names: { english: 'Grapefruit', nepali: 'ग्रेपफ्रुट', hindi: 'चकोतरा' }, image: grapefruitImg },
+  { id: '35', name: 'Tangerine', names: { english: 'Tangerine', nepali: 'ट्यान्जेरिन', hindi: 'संतरा' }, image: tangerineImg },
 ];
 
 export const insects: CategoryItem[] = [
