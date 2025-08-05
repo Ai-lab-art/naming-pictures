@@ -27,6 +27,10 @@ import snowLeopardImg from "@/assets/items/snow-leopard.jpg";
 import himalayanTahrImg from "@/assets/items/himalayan-tahr.jpg";
 import slothImg from "@/assets/items/sloth.jpg";
 import pangolinImg from "@/assets/items/pangolin.jpg";
+import platypusImg from "@/assets/items/platypus.jpg";
+import capybaraImg from "@/assets/items/capybara.jpg";
+import ayeAyeImg from "@/assets/items/aye-aye.jpg";
+import axolotlImg from "@/assets/items/axolotl.jpg";
 
 import dogImg from "@/assets/items/dog.jpg";
 import catImg from "@/assets/items/cat.jpg";
@@ -75,6 +79,10 @@ import lyrebirdImg from "@/assets/items/lyrebird.jpg";
 import quetzalImg from "@/assets/items/quetzal.jpg";
 import birdOfParadiseImg from "@/assets/items/bird-of-paradise.jpg";
 import hoopoeImg from "@/assets/items/hoopoe.jpg";
+import goldenPheasantImg from "@/assets/items/golden-pheasant.jpg";
+import lophophorusImg from "@/assets/items/lophophorus.jpg";
+import magnificentFrigatebirdImg from "@/assets/items/magnificent-frigatebird.jpg";
+import hoatzinImg from "@/assets/items/hoatzin.jpg";
 
 import appleImg from "@/assets/items/apple.jpg";
 import bananaImg from "@/assets/items/banana.jpg";
@@ -138,6 +146,10 @@ import poppyImg from "@/assets/items/poppy.jpg";
 import violetImg from "@/assets/items/violet.jpg";
 import zinniaImg from "@/assets/items/zinnia.jpg";
 import chrysanthemumImg from "@/assets/items/chrysanthemum.jpg";
+import monkeyFaceOrchidImg from "@/assets/items/monkey-face-orchid.jpg";
+import hookersLipsImg from "@/assets/items/hookers-lips.jpg";
+import flyingDuckOrchidImg from "@/assets/items/flying-duck-orchid.jpg";
+import nakedManOrchidImg from "@/assets/items/naked-man-orchid.jpg";
 
 import whaleImg from "@/assets/items/whale.jpg";
 import dolphinImg from "@/assets/items/dolphin.jpg";
@@ -205,6 +217,10 @@ export const wildAnimals: CategoryItem[] = [
   { id: '26', name: 'Himalayan Tahr', names: { english: 'Himalayan Tahr', nepali: 'थर', hindi: 'हिमालयी तहर' }, image: himalayanTahrImg },
   { id: '27', name: 'Sloth', names: { english: 'Sloth', nepali: 'ढिलो जनावर', hindi: 'आलसी जानवर' }, image: slothImg },
   { id: '28', name: 'Pangolin', names: { english: 'Pangolin', nepali: 'कवची जनावर', hindi: 'पैंगोलिन' }, image: pangolinImg },
+  { id: '29', name: 'Platypus', names: { english: 'Platypus', nepali: 'प्लाटिपस', hindi: 'प्लैटिपस' }, image: platypusImg },
+  { id: '30', name: 'Capybara', names: { english: 'Capybara', nepali: 'क्यापिबारा', hindi: 'कैपिबारा' }, image: capybaraImg },
+  { id: '31', name: 'Aye-aye', names: { english: 'Aye-aye', nepali: 'आए-आए', hindi: 'आए-आए' }, image: ayeAyeImg },
+  { id: '32', name: 'Axolotl', names: { english: 'Axolotl', nepali: 'एक्सोलोटल', hindi: 'एक्सोलोटल' }, image: axolotlImg },
 ];
 
 export const domesticAnimals: CategoryItem[] = [
@@ -258,6 +274,10 @@ export const birds: CategoryItem[] = [
   { id: '24', name: 'Quetzal', names: { english: 'Quetzal', nepali: 'केत्जल', hindi: 'क्वेत्ज़ल' }, image: quetzalImg },
   { id: '25', name: 'Bird of Paradise', names: { english: 'Bird of Paradise', nepali: 'स्वर्गीय चरा', hindi: 'स्वर्ग पक्षी' }, image: birdOfParadiseImg },
   { id: '26', name: 'Hoopoe', names: { english: 'Hoopoe', nepali: 'फाप्रे', hindi: 'हुदहुद' }, image: hoopoeImg },
+  { id: '27', name: 'Golden Pheasant', names: { english: 'Golden Pheasant', nepali: 'सुनौलो तित्तर', hindi: 'सुनहरा तीतर' }, image: goldenPheasantImg },
+  { id: '28', name: 'Lophophorus (Danphe)', names: { english: 'Lophophorus (Danphe)', nepali: 'दाँफे', hindi: 'दांफे' }, image: lophophorusImg },
+  { id: '29', name: 'Magnificent Frigatebird', names: { english: 'Magnificent Frigatebird', nepali: 'फ्रिगेटबर्ड', hindi: 'फ्रिगेटबर्ड' }, image: magnificentFrigatebirdImg },
+  { id: '30', name: 'Hoatzin', names: { english: 'Hoatzin', nepali: 'होत्जिन', hindi: 'होत्ज़िन' }, image: hoatzinImg },
 ];
 
 export const fruits: CategoryItem[] = [
@@ -327,6 +347,10 @@ export const flowers: CategoryItem[] = [
   { id: '18', name: 'Violet', names: { english: 'Violet', nepali: 'बैजनी', hindi: 'बैंगनी फूल' }, image: violetImg },
   { id: '19', name: 'Zinnia', names: { english: 'Zinnia', nepali: 'जिनिया', hindi: 'जिनिया' }, image: zinniaImg },
   { id: '20', name: 'Chrysanthemum', names: { english: 'Chrysanthemum', nepali: 'गोदावरी', hindi: 'गुलदाउदी' }, image: chrysanthemumImg },
+  { id: '21', name: 'Monkey Face Orchid', names: { english: 'Monkey Face Orchid', nepali: 'बाँदर मुख अर्किड', hindi: 'बंदर मुंह ऑर्किड' }, image: monkeyFaceOrchidImg },
+  { id: '22', name: 'Hooker\'s Lips', names: { english: 'Hooker\'s Lips', nepali: 'हुकरको ओठ', hindi: 'हुकर के होंठ' }, image: hookersLipsImg },
+  { id: '23', name: 'Flying Duck Orchid', names: { english: 'Flying Duck Orchid', nepali: 'उडिरहेको हाँस अर्किड', hindi: 'उड़ता बत्तख ऑर्किड' }, image: flyingDuckOrchidImg },
+  { id: '24', name: 'Naked Man Orchid', names: { english: 'Naked Man Orchid', nepali: 'नग्न मानिस अर्किड', hindi: 'नग्न आदमी ऑर्किड' }, image: nakedManOrchidImg },
 ];
 
 export const seaAnimals: CategoryItem[] = [
