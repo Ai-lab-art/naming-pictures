@@ -187,6 +187,28 @@ import tunaImg from "@/assets/items/tuna.jpg";
 import salmonImg from "@/assets/items/salmon.jpg";
 import barracudaImg from "@/assets/items/barracuda.jpg";
 
+// Sports & Games images
+import soccerImg from "@/assets/items/soccer.jpg";
+import basketballImg from "@/assets/items/basketball.jpg";
+import cricketSportImg from "@/assets/items/cricket.jpg";
+import tennisImg from "@/assets/items/tennis.jpg";
+import baseballImg from "@/assets/items/baseball.jpg";
+import volleyballImg from "@/assets/items/volleyball.jpg";
+import badmintonImg from "@/assets/items/badminton.jpg";
+import rugbyImg from "@/assets/items/rugby.jpg";
+import tableTennisImg from "@/assets/items/table-tennis.jpg";
+import hockeyImg from "@/assets/items/hockey.jpg";
+import boxingImg from "@/assets/items/boxing.jpg";
+import swimmingImg from "@/assets/items/swimming.jpg";
+import cyclingImg from "@/assets/items/cycling.jpg";
+import gymnasticsImg from "@/assets/items/gymnastics.jpg";
+import golfImg from "@/assets/items/golf.jpg";
+import athleticsImg from "@/assets/items/athletics.jpg";
+import wrestlingImg from "@/assets/items/wrestling.jpg";
+import karateImg from "@/assets/items/karate.jpg";
+import chessImg from "@/assets/items/chess.jpg";
+import skatingImg from "@/assets/items/skating.jpg";
+
 export interface CategoryItem {
   id: string;
   name: string;
@@ -406,6 +428,29 @@ export const seaAnimals: CategoryItem[] = [
   { id: '20', name: 'Barracuda', names: { english: 'Barracuda', nepali: 'ब्यारकुडा', hindi: 'बैराकुडा' }, image: barracudaImg },
 ];
 
+export const gamesSports: CategoryItem[] = [
+  { id: '1', name: 'Soccer', names: { english: 'Soccer', nepali: 'फुटबल', hindi: 'फुटबॉल' }, image: soccerImg },
+  { id: '2', name: 'Basketball', names: { english: 'Basketball', nepali: 'बास्केटबल', hindi: 'बास्केटबॉल' }, image: basketballImg },
+  { id: '3', name: 'Cricket', names: { english: 'Cricket', nepali: 'क्रिकेट', hindi: 'क्रिकेट' }, image: cricketSportImg },
+  { id: '4', name: 'Tennis', names: { english: 'Tennis', nepali: 'टेनिस', hindi: 'टेनिस' }, image: tennisImg },
+  { id: '5', name: 'Baseball', names: { english: 'Baseball', nepali: 'बेसबल', hindi: 'बेसबॉल' }, image: baseballImg },
+  { id: '6', name: 'Volleyball', names: { english: 'Volleyball', nepali: 'भलिबल', hindi: 'वॉलीबॉल' }, image: volleyballImg },
+  { id: '7', name: 'Badminton', names: { english: 'Badminton', nepali: 'ब्याडमिन्टन', hindi: 'बैडमिंटन' }, image: badmintonImg },
+  { id: '8', name: 'Rugby', names: { english: 'Rugby', nepali: 'रग्बी', hindi: 'रग्बी' }, image: rugbyImg },
+  { id: '9', name: 'Table Tennis', names: { english: 'Table Tennis', nepali: 'टेबल टेनिस', hindi: 'टेबल टेनिस' }, image: tableTennisImg },
+  { id: '10', name: 'Hockey', names: { english: 'Hockey', nepali: 'हकी', hindi: 'हॉकी' }, image: hockeyImg },
+  { id: '11', name: 'Boxing', names: { english: 'Boxing', nepali: 'बक्सिङ', hindi: 'बॉक्सिंग' }, image: boxingImg },
+  { id: '12', name: 'Swimming', names: { english: 'Swimming', nepali: 'पौडी', hindi: 'तैराकी' }, image: swimmingImg },
+  { id: '13', name: 'Cycling', names: { english: 'Cycling', nepali: 'साइकलिङ', hindi: 'साइक्लिंग' }, image: cyclingImg },
+  { id: '14', name: 'Gymnastics', names: { english: 'Gymnastics', nepali: 'जिम्नास्टिक', hindi: 'जिम्नास्टिक' }, image: gymnasticsImg },
+  { id: '15', name: 'Golf', names: { english: 'Golf', nepali: 'गल्फ', hindi: 'गोल्फ' }, image: golfImg },
+  { id: '16', name: 'Athletics', names: { english: 'Athletics', nepali: 'एथलेटिक्स', hindi: 'एथलेटिक्स' }, image: athleticsImg },
+  { id: '17', name: 'Wrestling', names: { english: 'Wrestling', nepali: 'कुस्ती', hindi: 'कुश्ती' }, image: wrestlingImg },
+  { id: '18', name: 'Karate', names: { english: 'Karate', nepali: 'कराते', hindi: 'कराटे' }, image: karateImg },
+  { id: '19', name: 'Chess', names: { english: 'Chess', nepali: 'चेस', hindi: 'शतरंज' }, image: chessImg },
+  { id: '20', name: 'Skating', names: { english: 'Skating', nepali: 'स्केटिङ', hindi: 'स्केटिंग' }, image: skatingImg },
+];
+
 export const categoryData: Record<string, CategoryItem[]> = {
   'Wild Animals': wildAnimals,
   'Domestic Animals': domesticAnimals,
@@ -414,4 +459,5 @@ export const categoryData: Record<string, CategoryItem[]> = {
   'Insects': insects,
   'Flowers': flowers,
   'Sea Animals': seaAnimals,
+  'Games and Sports': gamesSports,
 };

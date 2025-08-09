@@ -13,6 +13,7 @@ import fruitsImg from "@/assets/fruits.jpg";
 import insectsImg from "@/assets/insects.jpg";
 import flowersImg from "@/assets/flowers.jpg";
 import seaAnimalsImg from "@/assets/sea-animals.jpg";
+import gamesSportsImg from "@/assets/games-sports.jpg";
 
 const categories = [
   { title: "Wild Animals", image: wildAnimalsImg },
@@ -22,6 +23,7 @@ const categories = [
   { title: "Insects", image: insectsImg },
   { title: "Flowers", image: flowersImg },
   { title: "Sea Animals", image: seaAnimalsImg },
+  { title: "Games and Sports", image: gamesSportsImg },
 ];
 
 const Categories = () => {

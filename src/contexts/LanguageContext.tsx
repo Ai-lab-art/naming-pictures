@@ -61,6 +61,7 @@ const translations = {
     'categoryName.insects': 'Insects',
     'categoryName.flowers': 'Flowers',
     'categoryName.seaAnimals': 'Sea Animals',
+    'categoryName.gamesSports': 'Games and Sports',
   },
   hindi: {
     // Home page
@@ -113,6 +114,7 @@ const translations = {
     'categoryName.insects': 'कीड़े',
     'categoryName.flowers': 'फूल',
     'categoryName.seaAnimals': 'समुद्री जानवर',
+    'categoryName.gamesSports': 'खेल और क्रीड़ा',
   },
   nepali: {
     // Home page
@@ -165,6 +167,7 @@ const translations = {
     'categoryName.insects': 'कीराहरू',
     'categoryName.flowers': 'फूलहरू',
     'categoryName.seaAnimals': 'समुद्री जनावरहरू',
+    'categoryName.gamesSports': 'खेलकुद',
   }
 };
 
@@ -186,6 +189,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       'Insects': 'categoryName.insects',
       'Flowers': 'categoryName.flowers',
       'Sea Animals': 'categoryName.seaAnimals',
+      'Games and Sports': 'categoryName.gamesSports',
     };
     
     const translationKey = keyMap[englishName];
